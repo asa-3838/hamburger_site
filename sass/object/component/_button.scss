@@ -1,0 +1,14 @@
+@use "../../foundation/base" as *;
+
+.c-button {
+  margin: 60px 0;
+  button {
+    background-color: #F2EDE9;
+    padding: 41px 190px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: (23/16);
+    border: 1px solid $color-gray;
+    border-radius: 20px;
+  }
+}
