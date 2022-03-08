@@ -1,36 +1,6 @@
-@use "../foundation/base" as base;
-
 .l-sidebar {
   padding-top: 82px;
   padding-left: 46px;
   height: 100%;
   max-height: 100%;
-  &__title {
-    font-family: base.$font-robot;
-    font-size: 34px;
-    font-weight: bold;
-    line-height: (45/34);
-    color: base.$color-gray;
-  }
-  &__menu {
-    margin-top: 85px;
-    > a {
-      font-size: 24px;
-      font-weight: bold;
-      line-height: (36/24);
-      color: base.$color-gray;
-    }
-  }
-  &__sub-ul {
-    margin-top: 40px;
-    margin-left: 66px;
-  }
-  &__menu-item {
-    margin-top: 22px;
-    > a {
-      font-size: 20px;
-      line-height: (30/20);
-      color: base.$color-gray;
-    }
-  }
 }

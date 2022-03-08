@@ -1,0 +1,32 @@
+@use "../../foundation/base" as *;
+
+.p-sidebar {
+  &__title {
+    font-family: $font-robot;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: (45/34);
+    color: $color-gray;
+  }
+  &__menu {
+    margin-top: 85px;
+    > a {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: (36/24);
+      color: $color-gray;
+    }
+  }
+  &__sub-ul {
+    margin-top: 40px;
+    margin-left: 66px;
+  }
+  &__menu-item {
+    margin-top: 22px;
+    > a {
+      font-size: 20px;
+      line-height: (30/20);
+      color: $color-gray;
+    }
+  }
+}

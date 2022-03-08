@@ -1,4 +1,4 @@
-@use "../foundation/base" as base;
+@use "../foundation/base" as *;
 
 .l-contents {
   display: flex;
@@ -13,6 +13,18 @@
     right: 0;
     width: 20%;
     height: 100%;
-    background-color: base.$bgcolor-sub;
+    background-color: $bgcolor-sub;
+  }
+}
+
+.l-contents__left {
+  @include mq(tab) {
+  width: 100%;
+  }
+}
+
+.l-contents__right {
+  @include mq(tab) {
+  display: none;
   }
 }

@@ -1,0 +1,17 @@
+.p-single {
+  &__wrapper__list {
+    li {
+      font-size: 1.6rem;
+      line-height: (23/16);
+    }
+  }
+  &__number-list {
+    margin: 60px;
+  }
+  &__list-sec {
+    margin: 20px 13px;
+  }
+  &__list {
+    margin: 0 40px 60px;
+  }
+}

@@ -1,0 +1,22 @@
+@use "../../foundation/base" as *;
+
+.p-single {
+  &__table {
+    margin: 50px 0;
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid $color-gray;
+    }
+    th {
+      text-align: left;
+      font-weight: normal;
+    }
+    th,td {
+      font-size: 1.6rem;
+      line-height: (23/16);
+      border: 1px solid $color-gray;  /* 文字周りのスペース（パディング） */
+      padding: 28px 30px 28px;
+    }
+  }
+}

@@ -1,52 +1,14 @@
 @use "../foundation/base" as *;
 
 .l-header {
+  @include mq(tab) {
+    display: block;
+  } 
+  display: block;
   padding: 65px 0 65px 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   background-color: $bgcolor-header;
-  &__logo > a {
-    display: block;
-    font-family: $font-robot;
-    color: $color-gray;
-    font-size: 6.4rem;
-    font-weight: bold;
-    line-height: (84/64);
-  }
-  &__search {
-    margin-right: 31px;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  &__search__form {
-    width: 396px;
-    height: 46px;
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid $color-gray;
-    padding: 11px 11px 11px 37px;
-  }
-  &__search-icon {
-    width: 2.4rem;
-    height: 2.4rem;
-    position: absolute;
-    top:25%;
-    left:2%;
-  }
-  &__search-button {
-    font-family: $font-mplus;
-    width: 136px;
-    height: 46px;
-    background-color: #F2EDE9;
-    border-radius: 10px;
-    border: 1px solid $color-gray;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: $color-gray;
-    margin-left: 13px;
-    padding: 0;
-  }
 }
