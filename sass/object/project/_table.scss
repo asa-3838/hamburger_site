@@ -2,7 +2,10 @@
 
 .p-single {
   &__table {
-    margin: 50px 0;
+    @include mq(sp) {
+      margin-top: 30px;
+    }
+    margin-top: 50px;
     table{
       width: 100%;
       border-collapse: collapse;
@@ -11,12 +14,32 @@
     th {
       text-align: left;
       font-weight: normal;
-    }
-    th,td {
       font-size: 1.6rem;
       line-height: (23/16);
-      border: 1px solid $color-gray;  /* 文字周りのスペース（パディング） */
+      border: 1px solid $color-gray;
       padding: 28px 30px 28px;
+    }
+    th:nth-child(1) {
+      @include mq(tab) {
+        width: 28%;
+      }
+      @include mq(sp) {
+        width: 40%;
+      }
+    }
+    td {
+      font-size: 1.6rem;
+      line-height: (23/16);
+      border: 1px solid $color-gray;
+      padding: 28px 30px 28px;
+    }
+    td:nth-child(1) {
+      @include mq(tab) {
+        width: 28%;
+      }
+      @include mq(sp) {
+        width: 40%;
+      }
     }
   }
 }

@@ -1,4 +1,10 @@
+@use "../foundation/base" as *;
+
 .l-sidebar {
+  @include mq(tab) {
+    margin: 0;
+    padding: 0;
+    }
   padding-top: 82px;
   padding-left: 46px;
   height: 100%;

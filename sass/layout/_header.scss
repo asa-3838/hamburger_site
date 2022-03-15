@@ -2,9 +2,12 @@
 
 .l-header {
   @include mq(tab) {
-    display: block;
+    display: inline-block;
+    padding: 40px 0;
+    text-align: center;
   } 
-  display: block;
+  @include mq(sp) {
+  }
   padding: 65px 0 65px 65px;
   display: flex;
   justify-content: space-between;

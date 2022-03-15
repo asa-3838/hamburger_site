@@ -2,7 +2,11 @@
 
 .p-header {
   &__logo > a {
-    display: block;
+    @include mq(tab) {
+      text-align: center;
+      font-size: 4rem;
+      line-height: (53/40);
+    }
     font-family: $font-robot;
     color: $color-gray;
     font-size: 6.4rem;
@@ -10,12 +14,20 @@
     line-height: (84/64);
   }
   &__search {
+    @include mq(tab) {
+      display: inline-block;
+      margin-top: 38px;
+      margin-right: 0;
+    }
     margin-right: 31px;
     display: flex;
     align-items: center;
     position: relative;
   }
   &__search__form {
+    @include mq(sp) {
+      width: 230px;
+    }
     width: 396px;
     height: 46px;
     background-color: #fff;
@@ -28,16 +40,20 @@
     line-height: (33/16);
   }
   &__search-icon {
+    @include mq(sp) {
+      left: 5%;
+    }
     width: 2.4rem;
     height: 2.4rem;
     position: absolute;
-    top:25%;
-    left:2%;
+    top: 25%;
+    left: 2%;
   }
   &__search-button {
+    @include mq(sp) {
+      padding: 12px 23px;
+    }
     font-family: $font-mplus;
-    width: 136px;
-    height: 46px;
     background-color: #F2EDE9;
     border-radius: 10px;
     border: 1px solid $color-gray;
@@ -45,6 +61,6 @@
     font-weight: bold;
     color: $color-gray;
     margin-left: 13px;
-    padding: 0;
+    padding: 12px 52px;
   }
 }
