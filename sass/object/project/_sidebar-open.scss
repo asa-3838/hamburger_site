@@ -1,0 +1,86 @@
+@use "../../foundation/base" as *;
+
+  .l-contents__right.is-open {
+    @include mq(tab) {
+    background-color: $bgcolor-sub;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44%;
+    height: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+    }
+  .p-sidebar__title {
+    @include mq(tab) {
+      display: none;
+    }
+  }
+  .is-open {
+    @include mq(tab) {
+      margin: 25px 25px 117px auto ;
+      display: block;
+      width: 35px;/*枠の大きさ*/
+      height: 35px;/*枠の大きさ*/
+      background-color: $bgcolor-sub;
+      position: relative;
+    }
+  }
+  .is-open::before, .is-open::after{
+    @include mq(tab) {
+      content: "";
+      width: 100%;/*バツ線の長さ*/
+      height: 5px;/*バツ線の太さ*/
+      background: #707070;
+      transform: rotate(45deg);
+      transform-origin:0% 50%;
+      position: absolute;
+      top: calc(14% - 5px);
+      left: 14%;
+      > a {
+        display: block;
+      }
+    }
+  }
+  
+  .is-open::after{
+    @include mq(tab) {
+      transform: rotate(-45deg);
+      transform-origin:100% 50%;
+      left: auto;
+      right: 14%;
+    }
+  }
+  .p-sidebar__main-nav {
+    @include mq(tab) {
+      display: block;
+    }
+  }
+}
+
+.p-sidebar__back {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  min-height: 100%;
+  z-index: 400;
+}
+
+.p-sidebar__back {
+  &.is-open {
+    @include mq(tab) {
+    right: 0;
+    // position: fixed;
+    }
+  }
+}
+
+.body.is-open {
+  @include mq(tab) {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+}

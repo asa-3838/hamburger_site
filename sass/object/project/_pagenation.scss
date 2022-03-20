@@ -2,7 +2,7 @@
 
 .p-pagenation {
   @include mq(sp) {
-    margin: 60.4px 13% 31px;
+    margin: 60.4px 5% 31px;
   }
   margin: 150px 0 64px;
   &__ul {
@@ -11,6 +11,7 @@
     }
     display: flex;
     justify-content: center;
+    align-items: center;
     font-family: $font-robot;
     color: $color-gray;
     font-size: 1.6rem;
@@ -23,27 +24,49 @@
     }
     position: relative;
     display: inline-block;
-    margin-right: 57px;
+    margin-right: 26px;
+  }
+  &__li-common {
+    font-size: 2.3rem;
+    line-height: (23/16);
+    a {
+      @include mq(sp) {
+        vertical-align: middle;
+      }
+      color: $color-gray;
+    }
+  }
+  span {
+    @include mq(sp) {
+      vertical-align: middle;
+      display: inline-block;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: (23/16);
+      margin:0 5px;
+    }
+    display: none;
+  }
+  .before {
+    margin-right: 26px;
+  }
+  .next {
+    margin-left: 10px;
   }
   &__li-pc {
     @include mq(sp) {
       display: none;
     }
-    position: relative;
     border: solid 1px $color-gray;
     margin-right: 15px;
     a {
       display: block;
-      padding: 1px 12px;
+      padding: 1px 13px;
       color: $color-gray;
-    }
-    &__margin {
-      margin-right: 0;
     }
   }
   &__li-sp {
     @include mq(sp) {
-      position: relative;
       display: inline-block;
     }
     display: none;
@@ -54,85 +77,4 @@
       color: $color-gray;
     }
   }
-  .first::after {
-    @include mq(sp) {
-      top: -20%;
-      left: -80%;
-    }
-      content: "≪";
-      font-size: 2.3rem;
-      font-weight: bold;
-      position: absolute;
-      top: -18%;
-      left: 120%;
-    }
-  .last::after {
-    @include mq(sp) {
-      top: -20%;
-      left: 115%;
-    }
-    content: "≫";
-    font-size: 2.3rem;
-    font-weight: bold;
-    position: absolute;
-    top: -18%;
-    left: 160%;
-  }
 }
-
-// .p-pagenation {
-//   @include mq(tab) {
-//     margin: 105.5px auto 30px;  
-//   }
-// display: flex;
-// justify-content: center;
-//   margin: 150px 0 64px;
-//   &__title {
-//     margin-right: 54px;
-//   }
-//   &__li-sp {
-//     display: none;
-//     @include mq(sp) {
-//       display: block;
-//     }
-//   }
-//   &__ul {
-//     // position: relative;
-//     li,.p-pagenation__li-pc{
-//       font-family: $font-robot;
-//       display: inline-block;
-//       color: $color-gray;
-//       font-size: 1.6rem;
-//       font-weight: bold;
-//       line-height: (33/16);
-//     }
-//     li :not(.p-pagenation__title) {
-//       @include mq(tab) {
-//         margin-right: 13px;
-//       }
-//       padding: 1px 12px;
-//       border: solid 1px $color-gray;
-//       margin-right: 15px;
-//     }
-//     li:first-of-type:after {
-//       content: "≪";
-//       font-size: 2.3rem;
-//       font-weight: bold;
-//       position: absolute;
-//       top: -13%;
-//       left: 15%;
-//     }
-//     li:last-of-type:after {
-//       content: "≫";
-//       font-size: 2.3rem;
-//       font-weight: bold;
-//       position: absolute;
-//       top: -13%;
-//       left: 101%;
-//     }
-//     a {
-//       display: block;
-//       color: $color-gray;
-//     }
-//   }
-// }

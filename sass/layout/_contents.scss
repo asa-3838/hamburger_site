@@ -4,12 +4,14 @@
   display: flex;
   position: relative;
   &__left {
+    @include mq(tab) {
+      width: 100%;
+      }
     width: 80%;
     height: 100%;
   }
   &__right {
     @include mq(tab) {
-      background-color: $bgcolor-header;
       position: none;
       height: 0;
       }
@@ -19,11 +21,5 @@
     width: 20%;
     height: 100%;
     background-color: $bgcolor-sub;
-  }
-}
-
-.l-contents__left {
-  @include mq(tab) {
-  width: 100%;
   }
 }

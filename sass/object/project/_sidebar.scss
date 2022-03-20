@@ -18,11 +18,16 @@
       color: $color-gray;
     }
   }
+  &__main-nav {
+    @include mq(tab) {
+    display: none;
+    }
+  }
   &__menu {
-      @include mq(tab) {
-      display: none;
-      }
     margin-top: 85px;
+    @include mq(tab) {
+      margin: 38px 0 0 46px;
+    }
     > a {
       font-size: 2.4rem;
       font-weight: bold;
@@ -33,6 +38,9 @@
   &__sub-ul {
     margin-top: 40px;
     margin-left: 66px;
+    @include mq(tab) {
+      margin-left: 20px;
+    }
   }
   &__menu-item {
     margin-top: 22px;
