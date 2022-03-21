@@ -2,6 +2,7 @@
 
 .p-map-visual {
   position: relative;
+  overflow: hidden;
   > iframe {
     position: absolute;
     top: 0;
@@ -17,7 +18,7 @@
     @include mq(sp) {
     }
     width: 61%;
-    padding: 83px 119px; 
+    padding: 83px 120px; 
     position: relative;
     z-index: 300;
   }
@@ -25,7 +26,7 @@
     @include mq(tab) {
       padding: 40px 42px;
     }
-    padding: 83px 119px;
+    padding: 83px 120px;
     position: absolute;
     top: 0;
     right: 0;

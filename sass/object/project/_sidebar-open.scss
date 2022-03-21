@@ -1,16 +1,16 @@
 @use "../../foundation/base" as *;
 
-  .l-contents__right.is-open {
-    @include mq(tab) {
-    background-color: $bgcolor-sub;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 44%;
-    height: 100%;
-    z-index: 1000;
-    overflow-y: auto;
-    }
+.l-main__right.is-open {
+  @include mq(tab) {
+  background-color: $bgcolor-sub;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44%;
+  height: 100vh;
+  z-index: 1000;
+  overflow-y: auto;
+  }
   .p-sidebar__title {
     @include mq(tab) {
       display: none;
@@ -42,7 +42,7 @@
       }
     }
   }
-  
+
   .is-open::after{
     @include mq(tab) {
       transform: rotate(-45deg);
@@ -58,6 +58,21 @@
   }
 }
 
+
+
+//サイドバー展開時//
+.l-main__right.is-open {
+  .p-sidebar__main-ul:last-child {
+    @include mq(tab) {
+    padding-bottom: 503px;
+    }
+    @include mq(sp) {
+      padding-bottom: 1430px;
+    }
+  }
+}
+
+//サイドバー展開時//
 .p-sidebar__back {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -65,22 +80,11 @@
   right: -100%;
   width: 100%;
   min-height: 100%;
-  z-index: 400;
-}
-
-.p-sidebar__back {
+  z-index: 500;
   &.is-open {
     @include mq(tab) {
     right: 0;
-    // position: fixed;
     }
   }
 }
 
-.body.is-open {
-  @include mq(tab) {
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
-}

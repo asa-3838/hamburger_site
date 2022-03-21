@@ -64,17 +64,11 @@
       padding: 1px 13px;
       color: $color-gray;
     }
-  }
-  &__li-sp {
-    @include mq(sp) {
-      display: inline-block;
-    }
-    display: none;
-    a {
-      @include mq(sp) {
-        display: block;
+    &:hover {
+      background-color: $color-brown;
+      a {
+        color: #fff;
       }
-      color: $color-gray;
     }
   }
 }

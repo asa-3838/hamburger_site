@@ -1,5 +1,30 @@
 @use "../foundation/base" as *;
 
+.l-main {
+  display: flex;
+  position: relative;
+  &__left {
+    @include mq(tab) {
+      width: 100%;
+      }
+    width: 80%;
+    height: 100%;
+  }
+  &__right {
+    @include mq(tab) {
+      position: none;
+      height: 0;
+      }
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 400;
+    width: 20%;
+    height: 100%;
+    background-color: $bgcolor-sub;
+  }
+}
+
 .l-under-visual {
   @include mq(sp) {
     display: block;
@@ -9,4 +34,30 @@
   height: auto;
   padding: 40px;
   position: relative;
+}
+
+//tab・sp サイドバー展開時//
+.l-main__body.is-open {
+  @include mq(tab) {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+}
+
+//tab・sp サイドバー展開時//
+.l-main__right.is-open {
+  @include mq(tab) {
+  background-color: $bgcolor-sub;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44%;
+  height: 100vh;
+  z-index: 1000;
+  overflow-y: auto;
+  }
+  @include mq(sp) {
+    width: 87%;
+  }
 }
