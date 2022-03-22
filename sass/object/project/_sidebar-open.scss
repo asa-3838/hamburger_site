@@ -1,16 +1,6 @@
 @use "../../foundation/base" as *;
 
 .l-main__right.is-open {
-  @include mq(tab) {
-  background-color: $bgcolor-sub;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 44%;
-  height: 100vh;
-  z-index: 1000;
-  overflow-y: auto;
-  }
   .p-sidebar__title {
     @include mq(tab) {
       display: none;
@@ -25,8 +15,7 @@
       background-color: $bgcolor-sub;
       position: relative;
     }
-  }
-  .is-open::before, .is-open::after{
+  &::before, &::after{
     @include mq(tab) {
       content: "";
       width: 100%;/*バツ線の長さ*/
@@ -42,13 +31,13 @@
       }
     }
   }
-
-  .is-open::after{
+  &::after{
     @include mq(tab) {
       transform: rotate(-45deg);
       transform-origin:100% 50%;
       left: auto;
       right: 14%;
+      }
     }
   }
   .p-sidebar__main-nav {
@@ -57,8 +46,6 @@
     }
   }
 }
-
-
 
 //サイドバー展開時//
 .l-main__right.is-open {
