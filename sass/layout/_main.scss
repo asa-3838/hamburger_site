@@ -12,9 +12,8 @@
   }
   &__right {
     @include mq(tab) {
-      position: none;
-      height: 0;
-      }
+      right: -100%;
+    }
     position: absolute;
     top: 0;
     right: 0;
@@ -48,7 +47,6 @@
 //tab・sp サイドバー展開時//
 .l-main__right.is-open {
   @include mq(tab) {
-  background-color: $bgcolor-sub;
   position: absolute;
   top: 0;
   right: 0;

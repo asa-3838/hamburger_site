@@ -1,23 +1,49 @@
 @use "../../foundation/base" as *;
 
 .p-header {
-  &__logo > a {
-    @include mq(tab) {
+  &__wrapper {
+    @include mq(tab) { 
+      display: block;
       text-align: center;
-      font-size: 4rem;
-      line-height: (53/40);
     }
-    font-family: $font-robot;
-    color: $color-gray;
-    font-size: 6.4rem;
-    font-weight: bold;
-    line-height: (84/64);
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    @include mq(tab) {
+      margin-top: -30px;
+    }
+    > a {
+      @include mq(tab) {
+        font-size: 4rem;
+        line-height: (53/40);
+      }
+      font-family: $font-robot;
+      color: $color-gray;
+      font-size: 6.4rem;
+      font-weight: bold;
+      line-height: (84/64);
+    }
+  }
+  &__menu {
+    display: none;
+    @include mq(tab) {
+      display: block;
+      font-family: $font-robot;
+      color: $color-gray;
+      font-size: 3.4rem;
+      font-weight: bold;
+      line-height: (45/34);
+      margin: 0 26px 0 auto;
+    }
   }
   &__search {
     @include mq(tab) {
-      display: inline-block;
       margin-top: 38px;
       margin-right: 0;
+      width: 100%;
+      justify-content: center;
+      // margin-left: 100px;
     }
     margin-right: 31px;
     display: flex;
@@ -25,6 +51,8 @@
     position: relative;
   }
   &__search__form {
+    @include mq(tab) {
+    }
     @include mq(sp) {
       width: 230px;
     }
@@ -38,15 +66,15 @@
     font-size: 1.6rem;
     font-weight: bold;
     line-height: (33/16);
+    display:block;
   }
   &__search-icon {
-    @include mq(sp) {
-      left: 5%;
+    @include mq(tab) {
+      // left: 14%;
     }
     width: 2.4rem;
     height: 2.4rem;
     position: absolute;
-    top: 25%;
     left: 2%;
   }
   &__search-button {

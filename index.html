@@ -10,18 +10,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body id="close" class="l-main__body">
+<body class="l-main__body">
   <div class="l-main">
     <div class="l-main__wrapper">
     <div class="l-main__left">
-      <div id ="close" class="p-sidebar__back"></div>
+      <div class="p-sidebar__back"></div>
       <div class="l-header">
-        <h1 class="p-header__logo"><a href="/">Hamburger</a></h1>
-        <form class="p-header__search" action="#" method="get">
-          <input class="p-header__search__form" type="search">
-          <img class="p-header__search-icon" src="/images/search-form.png" alt="">
-          <input class="p-header__search-button" type="submit" value="検索">
-        </form>
+        <button id="menu_btn" class="p-header__menu">Menu</button>
+        <div class="p-header__wrapper">
+          <h1 class="p-header__logo"><a href="/">Hamburger</a></h1>
+          <form class="p-header__search" action="#" method="get">
+            <input class="p-header__search__form" type="search">
+            <img class="p-header__search-icon" src="/images/search-form.png" alt="">
+            <input class="p-header__search-button" type="submit" value="検索">
+          </form>
+        </div>
       </div>
   
       <div class="p-top-visual">
@@ -77,10 +80,10 @@
       </div>
     </div>
     </div>
-    <div id ="close" class="l-main__right">
+    <div class="l-main__right">
       <aside class="l-sidebar">
-        <h2 class="p-sidebar__title"><a href="">Menu</a></h2>
-        <button id ="close" class="p-sidebar__button"></button>
+        <h2 class="p-sidebar__title">Menu</h2>
+        <button id ="close_btn" class="p-sidebar__button"></button>
         <nav class="p-sidebar__main-nav">
           <ul class="p-sidebar__main-ul">
             <li class="p-sidebar__menu"><a href="#">バーガー</a>
@@ -130,6 +133,6 @@
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" rel="script" src="index.js"></script>
+  <script type="text/javascript" rel="script" src="js/index.js"></script>
 </body>
 </html>
