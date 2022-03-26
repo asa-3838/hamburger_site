@@ -13,6 +13,7 @@
   &__right {
     @include mq(tab) {
       right: -100%;
+      transition: right .5s;
     }
     position: absolute;
     top: 0;
@@ -36,6 +37,10 @@
 }
 
 //tab・sp サイドバー展開時//
+.l-main__body {
+  position: relative;
+}
+
 .l-main__body.is-open {
   @include mq(tab) {
     position: fixed;

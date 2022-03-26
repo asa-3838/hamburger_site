@@ -1,6 +1,9 @@
 @use "../../foundation/base" as *;
 
 .l-main__right.is-open {
+      @include mq(tab) {
+    right: 0;
+    }
   .p-sidebar__title {
     @include mq(tab) {
       display: none;
@@ -60,7 +63,7 @@
 }
 
 //サイドバー展開時//
-.p-sidebar__back {
+.l-main__back {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;

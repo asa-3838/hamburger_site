@@ -13,6 +13,9 @@
     @include mq(tab) {
       margin-top: -30px;
     }
+    @include mq(sp) {
+      margin-top: 0;
+    }
     > a {
       @include mq(tab) {
         font-size: 4rem;
@@ -36,14 +39,19 @@
       line-height: (45/34);
       margin: 0 26px 0 auto;
     }
+    @include mq(sp) {
+      font-size: 2rem;
+      line-height: (26/20);
+      margin: 0 0 0 auto;
+    }
   }
   &__search {
     @include mq(tab) {
-      margin-top: 38px;
-      margin-right: 0;
-      width: 100%;
+      margin: 38px 15% 0;
       justify-content: center;
-      // margin-left: 100px;
+    }
+    @include mq(sp) {
+      margin: 38px 5% 0;
     }
     margin-right: 31px;
     display: flex;
@@ -52,9 +60,7 @@
   }
   &__search__form {
     @include mq(tab) {
-    }
-    @include mq(sp) {
-      width: 230px;
+      width: 100%;
     }
     width: 396px;
     height: 46px;
@@ -69,8 +75,8 @@
     display:block;
   }
   &__search-icon {
-    @include mq(tab) {
-      // left: 14%;
+    @include mq(sp) {
+      left: 5%;
     }
     width: 2.4rem;
     height: 2.4rem;

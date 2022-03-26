@@ -174,6 +174,7 @@ body {
 @media screen and (max-width: 835px) {
   .l-main__right {
     right: -100%;
+    transition: right 0.5s;
   }
 }
 
@@ -188,6 +189,10 @@ body {
     display: block;
     padding: 20px 20px 49px 20px;
   }
+}
+
+.l-main__body {
+  position: relative;
 }
 
 @media screen and (max-width: 835px) {
@@ -547,6 +552,11 @@ body {
     margin-top: -30px;
   }
 }
+@media screen and (max-width: 376px) {
+  .p-header__logo {
+    margin-top: 0;
+  }
+}
 .p-header__logo > a {
   font-family: "Roboto", sans-serif;
   color: #707070;
@@ -574,6 +584,13 @@ body {
     margin: 0 26px 0 auto;
   }
 }
+@media screen and (max-width: 376px) {
+  .p-header__menu {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin: 0 0 0 auto;
+  }
+}
 .p-header__search {
   margin-right: 31px;
   display: flex;
@@ -582,10 +599,13 @@ body {
 }
 @media screen and (max-width: 835px) {
   .p-header__search {
-    margin-top: 38px;
-    margin-right: 0;
-    width: 100%;
+    margin: 38px 15% 0;
     justify-content: center;
+  }
+}
+@media screen and (max-width: 376px) {
+  .p-header__search {
+    margin: 38px 5% 0;
   }
 }
 .p-header__search__form {
@@ -601,9 +621,9 @@ body {
   line-height: 2.0625;
   display: block;
 }
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 835px) {
   .p-header__search__form {
-    width: 230px;
+    width: 100%;
   }
 }
 .p-header__search-icon {
@@ -611,6 +631,11 @@ body {
   height: 2.4rem;
   position: absolute;
   left: 2%;
+}
+@media screen and (max-width: 376px) {
+  .p-header__search-icon {
+    left: 5%;
+  }
 }
 .p-header__search-button {
   font-family: "M PLUS 1p", sans-serif;
@@ -1306,6 +1331,11 @@ body {
 }
 
 @media screen and (max-width: 835px) {
+  .l-main__right.is-open {
+    right: 0;
+  }
+}
+@media screen and (max-width: 835px) {
   .l-main__right.is-open .p-sidebar__title {
     display: none;
   }
@@ -1365,7 +1395,7 @@ body {
   }
 }
 
-.p-sidebar__back {
+.l-main__back {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
@@ -1375,7 +1405,7 @@ body {
   z-index: 500;
 }
 @media screen and (max-width: 835px) {
-  .p-sidebar__back.is-open {
+  .l-main__back.is-open {
     right: 0;
   }
 }
