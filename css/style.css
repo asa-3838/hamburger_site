@@ -150,6 +150,7 @@ body {
 }
 
 .l-main {
+  width: 100%;
   display: flex;
   position: relative;
 }
@@ -194,7 +195,6 @@ body {
 .l-main__body {
   position: relative;
 }
-
 @media screen and (max-width: 835px) {
   .l-main__body.is-open {
     position: fixed;
@@ -220,11 +220,28 @@ body {
   }
 }
 
+@media screen and (max-width: 835px) {
+  .l-main__back {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    z-index: 500;
+  }
+}
+@media screen and (max-width: 835px) {
+  .l-main__back.is-open {
+    right: 0;
+  }
+}
+
 .l-sidebar {
   padding-top: 82px;
   padding-left: 46px;
   height: 100%;
-  max-height: 100%;
 }
 @media screen and (max-width: 835px) {
   .l-sidebar {
@@ -1061,10 +1078,8 @@ body {
     line-height: 1.3;
   }
 }
-@media screen and (max-width: 835px) {
-  .p-sidebar__main-nav {
-    display: none;
-  }
+.p-sidebar__main-nav {
+  padding-bottom: 503px;
 }
 .p-sidebar__menu {
   margin-top: 85px;
@@ -1331,17 +1346,13 @@ body {
 }
 
 @media screen and (max-width: 835px) {
-  .l-main__right.is-open {
-    right: 0;
-  }
-}
-@media screen and (max-width: 835px) {
   .l-main__right.is-open .p-sidebar__title {
     display: none;
   }
 }
+
 @media screen and (max-width: 835px) {
-  .l-main__right.is-open .is-open {
+  .p-sidebar__button.is-open {
     margin: 25px 25px 117px auto;
     display: block;
     width: 35px;
@@ -1353,7 +1364,12 @@ body {
   }
 }
 @media screen and (max-width: 835px) {
-  .l-main__right.is-open .is-open::before, .l-main__right.is-open .is-open::after {
+  .p-sidebar__button.is-open {
+    margin: 25px 17px 117px auto;
+  }
+}
+@media screen and (max-width: 835px) {
+  .p-sidebar__button.is-open::before, .p-sidebar__button.is-open::after {
     content: "";
     width: 100%;
     /*バツ線の長さ*/
@@ -1366,47 +1382,16 @@ body {
     top: calc(14% - 5px);
     left: 14%;
   }
-  .l-main__right.is-open .is-open::before > a, .l-main__right.is-open .is-open::after > a {
+  .p-sidebar__button.is-open::before > a, .p-sidebar__button.is-open::after > a {
     display: block;
   }
 }
 @media screen and (max-width: 835px) {
-  .l-main__right.is-open .is-open::after {
+  .p-sidebar__button.is-open::after {
     transform: rotate(-45deg);
     transform-origin: 100% 50%;
     left: auto;
     right: 14%;
-  }
-}
-@media screen and (max-width: 835px) {
-  .l-main__right.is-open .p-sidebar__main-nav {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 835px) {
-  .l-main__right.is-open .p-sidebar__main-ul:last-child {
-    padding-bottom: 503px;
-  }
-}
-@media screen and (max-width: 376px) {
-  .l-main__right.is-open .p-sidebar__main-ul:last-child {
-    padding-bottom: 1430px;
-  }
-}
-
-.l-main__back {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  min-height: 100%;
-  z-index: 500;
-}
-@media screen and (max-width: 835px) {
-  .l-main__back.is-open {
-    right: 0;
   }
 }
 
